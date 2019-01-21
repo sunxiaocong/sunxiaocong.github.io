@@ -5,9 +5,8 @@
 
 # Site
 title: Cat Cabinet
-
 subtitle: Choose You Own Path
-description: 生活不止眼前的苟且
+description: Life is more than the present.
 author: Woe
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
@@ -87,7 +86,7 @@ rss:
 
 # Specify the date when the site was setup
 #since: 2015
-since: 2017
+since: 2019
 # icon between year and author @Footer
 authoricon: heart
 
@@ -121,6 +120,8 @@ menu:
   about: /about/
   archives: /archives/
   tags: /tags/
+#  sitemap: /sitemap.xml
+#  commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -137,6 +138,8 @@ menu_icons:
   schedule: calendar
   tags: tags
   archives: archive
+#  sitemap: sitemap
+#  commonweal: heartbeat
 
 
 
@@ -212,6 +215,7 @@ font:
   #LinkLabel: Link
 social:
     GitHub: https://github.com/daijiangtian
+#    简书: http://www.jianshu.com/u/b6608e27dc74
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
@@ -226,9 +230,9 @@ social_icons:
   Weibo: weibo
   简书: etsy
 
-  
+
 # reward
-reward_comment: 生活不止眼前的苟且
+reward_comment: Life is more than the present.
 alipay: /images/reward_image/alipay-reward-image.jpg
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
@@ -379,7 +383,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics: 36443ede179652b0cf6a526f12b1976f
+baidu_analytics: 36443ede179652b0cf6a526f12b1976f
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -387,7 +391,7 @@ han: false
 # Disqus
 disqus:
   enable: true
-  shortname: Cat Cabinet
+  shortname: anchoret
   count: true
 
 # Hypercomments
