@@ -11,7 +11,7 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 将Rsyslog打成一个镜像将会非常方便的进行部署，只需要在配置时将Elasticsearch地址写在对应环境变量即可
 <!-- more -->
 
-### Rsyslog Docker  
+### Dockerfile  
 
 ```shell
 FROM centos:7
@@ -41,7 +41,9 @@ CMD ["/usr/sbin/rsyslogd", "-n"]
 
 ```
 
-```bash docker-entrypoint 用于将conf ELASTIC地址转换为对应环境变量
+### docker-entrypoint 
+- 用于将conf ELASTIC地址转换为对应环境变量
+```bash 
 #!/bin/sh
 
 set -e
