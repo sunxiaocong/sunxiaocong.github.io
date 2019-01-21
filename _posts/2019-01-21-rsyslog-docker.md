@@ -7,8 +7,8 @@ tags: [docker,rsyslog]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 
-ryslog 是一个快速处理收集系统日志的程序，提供了高性能、安全功能和模块化设计。rsyslog 是syslog 的升级版，它将多种来源输入输出转换结果到目的地，据官网介绍，现在可以处理100万条信息。
-
+Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，
+将Rsyslog打成一个镜像将会非常方便的进行部署，只需要在配置时将Elasticsearch地址写在对应环境变量即可
 <!-- more -->
 
 ### Rsyslog Docker  
