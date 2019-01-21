@@ -42,15 +42,15 @@ CMD ["/usr/sbin/rsyslogd", "-n"]
 ```
 
 ### docker-entrypoint 
-- 用于将conf ELASTIC地址转换为对应环境变量
+用于将conf ELASTIC地址转换为对应环境变量
 ```bash 
-#!/bin/sh
-
-set -e
-
-sed -i "s#ELASTIC_HOSTS#${ELASTIC_HOSTS}#g" /etc/rsyslog.conf
-sed -i "s#INDEX_TAG#${INDEX_TAG}#g" /etc/rsyslog.conf
-
-exec "$@"
+    #!/bin/sh
+    
+    set -e
+    
+    sed -i "s#ELASTIC_HOSTS#${ELASTIC_HOSTS}#g" /etc/rsyslog.conf
+    sed -i "s#INDEX_TAG#${INDEX_TAG}#g" /etc/rsyslog.conf
+    
+    exec "$@"
 
 ```
