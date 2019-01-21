@@ -386,7 +386,7 @@ han: false
 # Disqus
 disqus:
   enable: true
-  shortname: anchoret
+  shortname: Woe
   count: true
 
 # Hypercomments
