@@ -4,7 +4,8 @@
 # ---------------------------------------------------------------
 
 # Site
-title: Woe
+title: Cat Cabinet
+
 subtitle: Choose You Own Path
 description: 生活不止眼前的苟且
 author: Woe
@@ -386,7 +387,7 @@ han: false
 # Disqus
 disqus:
   enable: true
-  shortname: Woe
+  shortname: Cat Cabinet
   count: true
 
 # Hypercomments
