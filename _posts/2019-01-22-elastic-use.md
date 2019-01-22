@@ -208,6 +208,50 @@ GET /_search
         { "_score": { "order": "desc" }}
     ]}
 ```
+* 常用dsl模板
+```json
+{
+	"query": {
+		"bool": {
+			"filter": {
+				"bool": {
+					"must": [{
+						"range": {
+							"@timestamp": {
+								"gte": "now-55s",
+								"lte": "now"
+							}
+						}
+					}],
+					"should": [{
+						"match": {
+							"dai": "11"
+						}
+					}, {
+						"match": {
+							"dafjkld": "222"
+						}
+					}]
+				}
+			},
+			"must": [{
+				"match": {
+					"message": "07f8b5bcd28011e8b5c00242ac110009"
+				}
+			}, {
+				"match": {
+					"trace_id": "d280"
+				}
+			}],
+			"must_not": [{
+				"match": {
+					"TF": "11"
+				}
+			}]
+		}
+	}
+}
+```
 
 
 
