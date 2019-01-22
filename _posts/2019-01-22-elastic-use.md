@@ -3,7 +3,7 @@ layout: post
 title: "ElaticSearch Kibana 使用与维护"
 date: 2019-01-22
 categories: 大数据
-tags: [ElasticSearch，Kibana]
+tags: [ElasticSearch,Kibana]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 
