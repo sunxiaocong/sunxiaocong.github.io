@@ -195,6 +195,7 @@ GET /_search
 * 查询一般条件为 match 该会计算 相关的sorce   
 * 过滤条件为Term 自会根据索引  性能非常高 不在意里面具体字段
 * 排序
+
 ```Javascript
 GET /_search
 {
@@ -208,7 +209,9 @@ GET /_search
         { "_score": { "order": "desc" }}
     ]}
 ```
+
 #### 2.3.7 常用dsl模板
+
 ```json
 {
 	"query": {
