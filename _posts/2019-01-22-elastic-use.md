@@ -208,7 +208,7 @@ GET /_search
         { "_score": { "order": "desc" }}
     ]}
 ```
-* 常用dsl模板
+#### 2.3.7 常用dsl模板
 ```json
 {
 	"query": {
