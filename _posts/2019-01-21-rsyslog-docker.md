@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rsyslog Dockerfile 配置"
-date: 2019-02-16
+date: 2019-01-21
 categories: 大数据
 tags: [docker,rsyslog]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
