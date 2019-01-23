@@ -109,6 +109,18 @@ POST /_cluster/reroute
 }
 ```
 
+### 1.6 集群自动分片移动配置
+
+参数有　all new_primaries primaries none  
+```
+PUT /_cluster/settings
+body = {
+    "transient": {
+	"cluster.routing.allocation.enable": "new_primaries"
+    }
+}
+```
+
 ## 2. 查询
 
 ### 2.1 空搜索
