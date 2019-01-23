@@ -12,8 +12,6 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 
 <!-- more -->
 
-###　基础概念
-
 #### 准实时
 
 Elasticsearch是一个近实时搜索平台。 这意味着从索引文档到可搜索文档的时间有一点延迟（通常是一秒）。
