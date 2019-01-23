@@ -1,6 +1,16 @@
+---
+layout: post
+title: "ElasticSearch 简介"
+date: 2019-01-23
+categories: 大数据
+tags: [ElasticSearch]
+image: http://gastonsanchez.com/images/blog/mathjax_logo.png
+---
+
+本文主要为翻译Elatic 6.5　官方文档　介绍集群的基础概念
 
 
-##　ElasticSearch 简介
+<!-- more -->
 
 ###　基础概念
 
