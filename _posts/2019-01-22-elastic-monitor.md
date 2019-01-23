@@ -36,6 +36,11 @@ print(end_time)
 def make_query():
     # query = '"query":{"bool": {"must":{"match":{"message":"百度OCPC渠道 - 100011 - 激活回调成功"}}}}'
     q1 = {
+        "slice":{
+            "id":0,
+            "max":1
+        } , # elasticsearch　5.0之后的新特性　可以使用多个切片并行拉取数据　max为最大并行数　
+    
         "query": {
             "bool": {
                 "filter": {
