@@ -120,6 +120,8 @@ menu:
   about: /about/
   archives: /archives/
   tags: /tags/
+  search: /search/
+
 #  sitemap: /sitemap.xml
 #  commonweal: /404.html
 
@@ -383,7 +385,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-baidu_analytics: 36443ede179652b0cf6a526f12b1976f
+baidu_analytics: 7819bc4471d04727f3612e2d7a2ca16d
 
 # Duoshuo ShortName
 #duoshuo_shortname:
