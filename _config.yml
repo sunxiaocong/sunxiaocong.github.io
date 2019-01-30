@@ -120,7 +120,6 @@ menu:
   about: /about/
   archives: /archives/
   tags: /tags/
-  search: /search/
 
 #  sitemap: /sitemap.xml
 #  commonweal: /404.html
@@ -152,8 +151,8 @@ menu_icons:
 
 # Schemes
 #scheme: Muse
-scheme: Mist
-#scheme: Pisces
+#scheme: Mist
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -548,29 +547,29 @@ calendar:
   maxResults: 250
 
 # Algolia Search
-algolia_search:
-  enable: true
-  hits:
-    per_page: 10
-  labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
-    hits_stats: "${hits} results found in ${time} ms"
+#algolia_search:
+#  enable: true
+#  hits:
+#    per_page: 10
+#  labels:
+#    input_placeholder: Search for Posts
+#    hits_empty: "We didn't find any results for the search: ${query}"
+#    hits_stats: "${hits} results found in ${time} ms"
 
 
 # Local search
-local_search:
-  enable: true
-  # if auto, trigger search by changing input
-  # if manual, trigger search by pressing enter key or search button
-  trigger: auto
-  # show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
-
-# External URL with BASE64 encrypt & decrypt
-# Usage: {% exturl text url "title" %}
-# Alias: {% extlink text url "title" %}
-exturl: false
+#local_search:
+#  enable: true
+#  # if auto, trigger search by changing input
+#  # if manual, trigger search by pressing enter key or search button
+#  trigger: auto
+#  # show top n results per article, show all results by setting to -1
+#  top_n_per_article: 1
+#
+## External URL with BASE64 encrypt & decrypt
+## Usage: {% exturl text url "title" %}
+## Alias: {% extlink text url "title" %}
+#exturl: false
 
 
 #! ---------------------------------------------------------------
