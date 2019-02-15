@@ -121,7 +121,7 @@ PUT _template/monitor_template
 
 ### 数据量在 500M 至5G
 
-####配置
+#### 配置
 ```json
 PUT _ilm/policy/mid_policy
 {
@@ -172,9 +172,9 @@ PUT _template/my_template
 对于该数据量的索引 合并分片不能提升查询效率 因此只做 merge segment 操作
 
 
-### 数据量在 5G
+### 数据量在 5G以上
 
-####配置
+#### 配置
 ```json
 PUT _ilm/policy/big_policy
 {
