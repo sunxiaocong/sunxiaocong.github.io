@@ -109,6 +109,16 @@ POST /_cluster/reroute
 }
 ```
 
+#### 设置副本个数
+```
+PUT /my_index/_settings
+{
+    "index" : {
+        "number_of_replicas" : 0
+    }
+}
+```
+
 ### 1.6 集群自动分片移动配置
 
 参数有　all new_primaries primaries none  
