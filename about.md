@@ -5,5 +5,5 @@ header: About Me
 group: navigation
 ---
 
-计算机废柴的心酸码农路
+在这个独立博客式微的时代，能在众多博客中与你相遇，是一种缘分。
 
