@@ -131,6 +131,18 @@ body = {
 }
 ```
 
+### 1.7 开启关闭xpack监控
+```
+GET _cluster/settings
+
+PUT _cluster/settings
+{
+  "persistent": {
+    "xpack.monitoring.collection.enabled": false
+  }
+}
+```
+
 ## 2. 查询
 
 ### 2.1 空搜索
