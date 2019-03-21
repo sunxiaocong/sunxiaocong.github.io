@@ -215,7 +215,7 @@ font:
 #social:
   #LinkLabel: Link
 social:
-    GitHub: https://github.com/daijiangtian
+    GitHub: https://github.com/sunxiaocong
 #    简书: http://www.jianshu.com/u/b6608e27dc74
 # Social Links Icons
 # Icon Mapping:
@@ -238,7 +238,7 @@ alipay: /images/reward_image/alipay-reward-image.jpg
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
 #avatar:
-avatar: /images/avatar.jpg
+avatar: /images/Mycar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
