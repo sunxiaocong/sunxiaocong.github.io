@@ -8,7 +8,7 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 传统的关系型数据库，如 Oracle、DB2、MySQL、SQL SERVER 等采用行式存储法(Row-based)，在基于行式存储的数据库中， 数据是按照行数据为基础逻辑存储单元进行存储的， 一行中的数据在存储介质中以连续存储形式存在。  
 列式存储(Column-based)是相对于行式存储来说的，新兴的 Hbase、HP Vertica、EMC Greenplum 等分布式数据库均采用列式存储。在基于列式存储的数据库中， 数据是按照列为基础逻辑存储单元进行存储的，一列中的数据在存储介质中以连续存储形式存在。  
-！[存储模型图](https://i.loli.net/2019/03/25/5c989fa6e5bef.jpg)
+![存储模型图](https://i.loli.net/2019/03/25/5c989fa6e5bef.jpg)
 <!-- more -->
 ## 行式存储的适用场景包括
     1、适合随机的增删改查操作;
