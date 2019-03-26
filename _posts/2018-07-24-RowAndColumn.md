@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "行式存储于列式存储"
-date: 2018-07-23
+date: 2018-07-24
 categories: 数据库存储
 tags: [store]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
