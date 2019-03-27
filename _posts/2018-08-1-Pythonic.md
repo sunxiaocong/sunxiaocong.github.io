@@ -1,0 +1,135 @@
+---
+layout: post
+title: "pythonic"
+date: 2018-07-24
+categories: python
+tags: [python]
+image: http://gastonsanchez.com/images/blog/mathjax_logo.png
+---
+如何写出pythonic代码。为何你写的代码不够pythonic
+<!-- more -->
+
+## 对象复制（copy）
+* 直接赋值：其实就是对象的引用（别名）。
+![直接赋值](https://i.loli.net/2019/03/27/5c9b201c28866.png)
+* 浅拷贝(copy)：拷贝父对象，不会拷贝对象的内部的子对象。
+![直接赋值](https://i.loli.net/2019/03/27/5c9b201c4afde.png)
+* 深拷贝(deepcopy)： copy 模块的 deepcopy 方法，完全拷贝了父对象及其子对象。
+![直接赋值](https://i.loli.net/2019/03/27/5c9b201c5064f.png)
+
+### 不合理的对象复制对代码效率的影响多大？
+~~~
+data = [str(randint(1,9)) for x in range(8000000)]
+def test1():
+    s = time.time()
+    all_add = ''
+    for x in data:
+        all_add = all_add + x
+    print(time.time() - s)
+def test2():
+    s = time.time()
+    all_add = ''.join(data)
+    print(time.time() - s)
+
+if __name__ == "__main__":
+    test1()
+    test2()
+结果:
+2.995000123977661
+0.0710000991821289    
+~~~
+为什么test1 会比 test2花费的时间多？因为str对象在python中是只读的。在all_add = all_add + x的过程中需要构建一个临时对象，中间涉及到对象的copy会造成性能的损失。
+
+
+## 迭代器
+### 合理使用迭代成能够大大优化程序的性能
+~~~
+def test1():
+    s = time.time()
+    for i in range(1000000):
+        pass
+    print(time.time() - s)
+
+def test2():
+    s = time.time()
+    for i in xrange(1000000):
+        pass
+    print(time.time() - s)
+
+if __name__ == "__main__":
+    test1()
+    test2()
+结果:
+12.1642300644654
+7.546489951565265
+~~~
+xrange 是迭代器方法(在python3中range就是迭代器方法)，不仅能够有效的节省内存空间，还能提升效率。
+
+
+## 数据结构
+### list 与 set
+~~~
+data1 = list(range(100000))
+data2 = set(range(100000))
+print(timeit.timeit("999999 in data1", setup="from __main__ import data1"))
+print(timeit.timeit("999999 in data2", setup="from __main__ import data2"))
+~~~
+set 集合中的数据是有索引的，查找某个值的时间复杂度是O(1),而列表的查找值的时间复杂度是O(n)。所以使用合理的数据结构能够大大大优化程序的效率！
+
+## python 线程
+### 问题1：主线程退出，子线程还会继续执行吗
+答案:会，主线程，子线程是并行的。
+~~~
+def sub_thead():
+    time.sleep(1)
+    print('subthead run over')
+
+
+def main1():
+    t = Thread(target=sub_thead)
+    t.start()
+    print('main run over')
+
+
+if __name__ == "__main__":
+    main1()
+    
+结果:
+main run over
+subthead run over
+~~~
+### 子进程异常，主线程会继续执行？
+答案:会
+~~~
+def sub_thead():
+    1/0
+    time.sleep(1)
+    print('subthead run over')
+    
+def main3():
+    t = Thread(target=sub_thead)
+    t.start()
+    time.sleep(2)
+    print('main run over')
+
+if __name__ == "__main__":
+    main1()
+        
+结果:
+main run over
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "E:/WORKDIR/历史数据处理/Check/code-check/ttt.py", line 6, in sub_thead
+    1/0
+ZeroDivisionError: division by zero
+~~~
+
+当设置参数t.daemon=True时，主线程结束是，才会kill掉子线程。
+
+
+## 相关链接
+[Python并发编程与实时大数据处理监控](https://yq.aliyun.com/articles/694613?spm=a2c4e.11163080.searchblog.9.67282ec1ra4vOZ)
