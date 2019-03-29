@@ -98,7 +98,7 @@ if __name__ == "__main__":
 main run over
 subthead run over
 ~~~
-### 子进程异常，主线程会继续执行？
+### 问题2：子进程异常，主线程会继续执行？
 答案:会
 ~~~
 def sub_thead():
