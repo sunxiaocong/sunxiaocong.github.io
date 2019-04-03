@@ -71,8 +71,8 @@ print(xx)
 
 * 访问方式：
 > 通过 bin/sqlline-thin.py 脚本访问，提供交互式操作。  
-Ø 用法：bin/sqlline-thin.py [[scheme://]host[:port]] [sql_file]  
-Ø 示例：bin/sqlline-thin.py http://localhost:8765  
+> 用法：bin/sqlline-thin.py [[scheme://]host[:port]] [sql_file]  
+> 示例：bin/sqlline-thin.py http://localhost:8765  
  
 
 ## 怎么使用queryserver
