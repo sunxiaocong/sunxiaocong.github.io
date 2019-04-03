@@ -77,9 +77,9 @@ print(xx)
 
 ## 怎么使用queryserver
 ### queryserver部署（通过docker容器化，在同一机器上可以同时部署多个服务）
-* 如果部署在 HBase 集群，可以省略以下步骤 1，2
-1. 创建配置文件目录 hbase_conf(配置参数调整看相关链接)
-2. 在 hbase_conf 目录下创建 hbase-site.xml文件，并配置 zk 地址：
+如果部署在 HBase 集群，可以省略以下步骤1,2  
+创建配置文件目录 hbase_conf(配置参数调整看相关链接)  
+在 hbase_conf 目录下创建 hbase-site.xml文件，并配置 zk 地址:  
 ~~~
  <configuration>
     <property>
