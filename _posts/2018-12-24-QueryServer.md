@@ -62,6 +62,19 @@ xx = cursor.fetchall()
 print(xx)
 ~~~
 
+### 轻客户端链接 QueryServer
+* 轻客户端 JDBC URL 格式：jdbc:phoenix:thin:url=<scheme>://<server-hostname>:<port>[;option=value...]
+
+> scheme:传输协议，目前只支持 http，可以省略。     
+> server-hostname : queryserver 或者 SLB 的 host。  
+> port: 默认端口是8765，可以省略。  
+
+* 访问方式：
+> 通过 bin/sqlline-thin.py 脚本访问，提供交互式操作。  
+Ø 用法：bin/sqlline-thin.py [[scheme://]host[:port]] [sql_file]  
+Ø 示例：bin/sqlline-thin.py http://localhost:8765  
+ 
+
 ## 怎么使用queryserver
 ### queryserver部署（通过docker容器化，在同一机器上可以同时部署多个服务）
 * 如果部署在 HBase 集群，可以省略以下步骤 1，2
