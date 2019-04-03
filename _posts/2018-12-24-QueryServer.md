@@ -11,7 +11,7 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 2.为什么要使用queryserver  
 3.怎么使用queryserver  
 <!-- more -->
-## 什么是queryserver
+## 什么是queryserver？
 ### 首先了解一下Phoenix是什么？
 ~~~
 • 社区公认的 HBase 上最合适的 SQL 层。
@@ -22,12 +22,12 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 • 提供二级索引能力
 • 提供简单的tenancy能力 
 ~~~
-### 那么什么是QueryServer？
+### QueryServer作用与实现
 ~~~
-• 一个HTTP Server
-• 代理请求并发送给 Phoenix
-• 基于 Apache Calcite Avatica 实现
-• QueryServer 可以有一个或多个，通过负载均衡统一访问入口，并提高可用性。
+• QueryServer的本质一个HTTP Server
+• 代理请求并发送给Phoenix进行处理
+• 基于Apache Calcite Avatica 实现
+• QueryServer可以有一个或多个，通过负载均衡统一访问入口，并提高可用性。
 ~~~
 
 ## 为什么要使用queryserver
@@ -103,4 +103,5 @@ print(xx)
 > bin\queryserver.py start
 
 ## 相关链接
-[1. 一分钟搞懂列式与行式数据库](http://zhuanlan.51cto.com/art/201703/535729.htm)  
+[1. hbase-site.xml配置详解](https://blog.csdn.net/ningxuezhu/article/details/50547970)  
+[2. phoenix 官网](https://phoenix.apache.org/)
