@@ -7,6 +7,7 @@ tags: [flume]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 flume 自定义channel开发。
+<!-- more -->
 ### 需求
 ~~~
 修改的初衷：
