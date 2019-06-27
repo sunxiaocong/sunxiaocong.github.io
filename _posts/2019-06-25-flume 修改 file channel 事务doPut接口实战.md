@@ -8,6 +8,7 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 flume 自定义channel开发。
 <!-- more -->
+
 ### 需求
 ~~~
 修改的初衷：
@@ -146,12 +147,12 @@ a1.channels.c1.removeKeys = {"table_name":["removeKey1","removeKey2"]}
 ~~~
 
 ### 推荐阅读链接
+[flume 自定义source，sink，channel，拦截器](https://blog.csdn.net/qq_36864672/article/details/78663718)
+[Flume - FileChannel源码详解](https://blog.csdn.net/qianshangding0708/article/details/48133033)
 
 
 ### 总结
 解决方案不是很完美，之后研究一下拦截器的用法。
-[flume 自定义source，sink，channel，拦截器](https://blog.csdn.net/qq_36864672/article/details/78663718)
-[Flume - FileChannel源码详解](https://blog.csdn.net/qianshangding0708/article/details/48133033)
 
 
 
