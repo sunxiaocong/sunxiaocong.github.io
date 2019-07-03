@@ -6,8 +6,8 @@
 # Site
 title: Waiting for the right person！
 subtitle: Is you?
-description: forced by life！
-author: sunxiaocong
+description: 25岁的我还不知道在追寻什么！！！
+author: 孙晓聪
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
@@ -294,10 +294,7 @@ links_title: 推荐阅读
 links:
   阮一峰的网络日志: http://www.ruanyifeng.com/blog/archives.html
   R的极客理想系列: http://blog.fens.me/series-r/
-  谢益辉: https://yihui.name/
-  解螺旋的矿工: http://www.huangshujia.me/
   GuangchuangYu: https://github.com/GuangchuangYu
-  生信技能树: https://vip.biotrainee.com/
   cloudman博客（云相关openstack,k8s）: https://www.cnblogs.com/CloudMan6/
   大数据，机器学习 : http://www.jasongj.com/
 
