@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "go struct和interface"
-date: 2018-08-10
+date: 2018-08-20
 categories: go
 tags: [go]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
@@ -10,6 +10,7 @@ go struct和interface。结构体和接口。
 <!-- more -->
 
 ### struck 结构体
+
 * 结构体定义
 ~~~
 type struct_variable_type struct {
@@ -18,8 +19,9 @@ type struct_variable_type struct {
    ...
    member definition;
 }
-~~~
-* 结构体成员变量访问
+~~~  
+
+* 结构体成员变量访问  
 ~~~
 struct 类似于 java 中的类，可以在struct中定义成员变量。
 要访问成员变量，可以有两种方式:
