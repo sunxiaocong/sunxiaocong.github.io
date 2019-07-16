@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "flume 修改 file channel 事务doPut接口实战"
+title: "flume修改file channel内部事务类FileBackedTransaction实战"
 date: 2019-06-25
 categories: flume
 tags: [flume]
@@ -12,8 +12,10 @@ flume 自定义channel开发。
 ### 需求
 ~~~
 修改的初衷：
-由于业务需求,在海外服务的日志通过flume spooldir 的方式收集到flume上，并通过flume到flume的方式对传回到国内存储起来提供后续的离线分析。由于日志格式是json格式，并且有日志量大，单条日志大的特点。
-给到我的需求是,在source到channel这一过程将event 中不需要的key剔除。
+由于业务需求,在海外服务的日志通过flume spooldir 的方式收集到flume上，
+并通过flume到flume的方式对传回到国内存储起来提供后续的离线分析。
+由于日志格式是json格式，并且有日志量大，单条日志大的特点。
+给到我的需求是,在source到channel这一过程将event中不需要的key剔除。
 第一想到的是拦截器，but对拦截器一点想法都没有。
 灵光一现，实现了如下这个方案。
 ~~~
@@ -28,7 +30,8 @@ git地址 : https://github.com/apache/flume 克隆对应版本flume1.9.0的代�
 #### 克隆 flume-flie-channel
 ~~~
 克隆这个文件夹到自己的项目下.
-打开src/java 可以看到如下文件夹目录org.apache.flume.channel.file,修改为自己的项目名称如com.sxc.flume.channel.file。这个可以根据自己的想法修改。
+打开src/java 可以看到如下文件夹目录org.apache.flume.channel.file,
+修改为自己的项目名称如com.sxc.flume.channel.file。这个可以根据自己的想法修改。
 ~~~
 
 #### 修改 pom.xml 
@@ -40,7 +43,7 @@ git地址 : https://github.com/apache/flume 克隆对应版本flume1.9.0的代�
 ~~~
 #### 源码分析
 ~~~
-//FileBackedTransaction继承BasicTransactionSemantics
+//FileBackedTransaction继承BasicTransactionSemantics实现如下这些方法
 public abstract class BasicTransactionSemantics implements Transaction {
     private BasicTransactionSemantics.State state;
     private long initialThreadId;
@@ -59,7 +62,8 @@ public abstract class BasicTransactionSemantics implements Transaction {
     }
 
 FileChannel的内部事务类 -- FileBackedTransaction
-所以无论get还是put数据都要获取这个事务。source调用doPut将event写入channel，在doPut这个接口实现剔除逻辑即可
+所以无论get还是put数据都要获取这个事务。source调用doPut将event写入channel，
+在doPut这个接口实现剔除逻辑即可
 ~~~
 
 ### 添加配置removeKeys
@@ -67,7 +71,9 @@ FileChannel的内部事务类 -- FileBackedTransaction
 添加配置的方式非常简单,只需要在FileChannelConfiguration增加如下两行
     public static final String REMOVE_KEYS = "removeKeys";
     public static String DEFAULT_REMOVE_KEYS = null;
-配置项removeKeys的结构是json结构，如{"table_name":["removeKey1","removeKey2"]}。首先解释一下table_name的含义，在event的header中有标记这个event是属于哪一张表的字段，通过这个标记来判断是否需要剔除body里面的数据，removeKey1就是需要剔除的key值。
+配置项removeKeys的结构是json结构，如{"table_name":["removeKey1","removeKey2"]}。
+首先解释一下table_name的含义，在event的header中有标记这个event是属于哪一张表的字段，
+通过这个标记来判断是否需要剔除body里面的数据，removeKey1就是需要剔除的key值。
 ~~~
 
 #### 修改doPut在event写入channel前进行处理
@@ -140,14 +146,20 @@ protected void doPut(Event event) throws InterruptedException {
 ### 打包流程
 ~~~
 第一步：使用idea打包这个项目生成一个jar包
-第二步：进入apache-flume-1.9.0-bin/plugins.d,新建目录sxc_file_channel ,进入新建的目录，创建lib，libext，native三个文件夹，将第一步打好的jar包放入lib目录下
-第三步，测试使用。在flume的配置文件中使用刚才打包好的file_channel。还记得在之前改的名字嘛？在配置中使用如下配置获取FileChannel对应的类。我们就可以使用我们先添加的removeKeys配置了。
+
+第二步：进入apache-flume-1.9.0-bin/plugins.d,新建目录sxc_file_channel ,
+进入新建的目录，创建lib，libext，native三个文件夹，
+将第一步打好的jar包放入lib目录下
+
+第三步，测试使用。在flume的配置文件中使用刚才打包好的file_channel。
+还记得在之前改的名字嘛？在配置中使用如下配置获取FileChannel对应的类。
+我们就可以使用我们先添加的removeKeys配置了。
 a1.channels.c1.type = com.sxc.flume.channel.file.FileChannel
 a1.channels.c1.removeKeys = {"table_name":["removeKey1","removeKey2"]}
 ~~~
 
 ### 推荐阅读链接
-[flume 自定义source，sink，channel，拦截器](https://blog.csdn.net/qq_36864672/article/details/78663718)
+[flume 自定义source，sink，channel，拦截器](https://blog.csdn.net/qq_36864672/article/details/78663718)  
 [Flume - FileChannel源码详解](https://blog.csdn.net/qianshangding0708/article/details/48133033)
 
 
