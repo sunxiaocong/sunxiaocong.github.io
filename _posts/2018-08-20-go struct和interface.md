@@ -9,7 +9,7 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 go struct和interface。结构体和接口。
 <!-- more -->
 
-### struck 结构体
+### struct 结构体
 
 * 结构体定义
 ```
