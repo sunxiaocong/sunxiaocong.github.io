@@ -114,10 +114,11 @@ sudo chmod -R 777 /var/lib/ganglia
  -Dflume.monitoring.type=ganglia   
  -Dflume.monitoring.hosts=ip:8649 
  
-* flume参数
-字段(图标名称)|字段含义                          //表头
--|-                                 //没有格子的内容对齐方式
-ChannelCapacity|channel的容量                   //每行内容，可以往下不断添加
+* flume参数  
+
+字段(图标名称)|字段含义                         
+-|-                                
+ChannelCapacity|channel的容量                   
 ChannelFillPercentage|channel占用百分比
 ChannelSize|目前channel中事件的总数量
 EventPutAttemptCount|source尝试写入channel的事件总数量

@@ -8,6 +8,7 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 ganglia image rebuild 
 feat : add env GANGLIA_HOST 
+<!-- more -->
 
 ### 主要实现目的
 为了部署方便，直接通过配置环境变量GANGLIA_HOST，将部署的主机ip写入配置文件gmetad.conf和gmond.conf
