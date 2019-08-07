@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2019-08-02-flume安装监控Ganglia"
-date: 2018-08-10
+date: 2019-08-02
 categories: flume
 tags: [flume]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
@@ -23,14 +23,15 @@ sudo yum -y install ganglia-web
 sudo yum install -y ganglia-gmond  
 * 修改配置文件ganglia.conf
 > sudo vim /etc/httpd/conf.d/ganglia.conf  
+
 ~~~
-Alias /ganglia /usr/share/ganglia
-<Location /ganglia>
-  Require all granted
-  # Require local
-  # Require ip 10.1.2.3
-  # Require host example.org
-</Location>
+    Alias /ganglia /usr/share/ganglia
+    <Location /ganglia>
+      Require all granted
+      # Require local
+      # Require ip 10.1.2.3
+      # Require host example.org
+    </Location>
 ~~~
 
 * 修改配置文件gmetad.conf
@@ -42,30 +43,30 @@ data_source "test" ip
 修改为，主机名和ip与上面配置一致
 
 ~~~
-cluster {
-  name = "hadoop-101"
-  owner = "unspecified"
-  latlong = "unspecified"
-  url = "unspecified"
-}
-udp_send_channel {
-  #bind_hostname = yes # Highly recommended, soon to be default.
-                       # This option tells gmond to use a source address
-                       # that resolves to the machine's hostname.  Without
-                       # this, the metrics may appear to come from any
-                       # interface and the DNS names associated with
-                       # those IPs will be used to create the RRDs.
-  # mcast_join = 239.2.11.71
-  host = 192.168.114.101
-  port = 8649
-  ttl = 1
-}
-udp_recv_channel {
-  # mcast_join = 239.2.11.71
-  port = 8649
-  # bind = ip
-  retry_bind = true
-}
+    cluster {
+      name = "hadoop-101"
+      owner = "unspecified"
+      latlong = "unspecified"
+      url = "unspecified"
+    }
+    udp_send_channel {
+      #bind_hostname = yes # Highly recommended, soon to be default.
+                           # This option tells gmond to use a source address
+                           # that resolves to the machine's hostname.  Without
+                           # this, the metrics may appear to come from any
+                           # interface and the DNS names associated with
+                           # those IPs will be used to create the RRDs.
+      # mcast_join = 239.2.11.71
+      host = 192.168.114.101
+      port = 8649
+      ttl = 1
+    }
+    udp_recv_channel {
+      # mcast_join = 239.2.11.71
+      port = 8649
+      # bind = ip
+      retry_bind = true
+    }
 ~~~
 
 * 修改配置文件config
@@ -115,7 +116,7 @@ sudo chmod -R 777 /var/lib/ganglia
  
 * flume参数
 字段(图标名称)|字段含义                          //表头
-:----|:----:                                    //没有格子的内容对齐方式
+-|-                                 //没有格子的内容对齐方式
 ChannelCapacity|channel的容量                   //每行内容，可以往下不断添加
 ChannelFillPercentage|channel占用百分比
 ChannelSize|目前channel中事件的总数量
