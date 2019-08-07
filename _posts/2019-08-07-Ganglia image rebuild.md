@@ -6,7 +6,7 @@ categories: docker
 tags: [docker,flume]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
-ganglia image rebuild 
+ganglia image rebuild   
 feat : add env GANGLIA_HOST 
 <!-- more -->
 
@@ -119,6 +119,26 @@ DOCKER FILE COME FROM:https://hub.docker.com/r/wookietreiber/ganglia/dockerfile
     sed -i "s#GANGLIA_HOST#${GANGLIA_HOST}#g" /etc/ganglia/gmond.conf
     
 
+### 部署
+    运行默认配置
+    docker run -p 0.0.0.0:80:80 ganglia
+    
+    查看运行帮助
+    docker run ganglia --help
+    
+    替换自己的配置文件运行
+    docker run -v /path/to/conf:/etc/ganglia -p 0.0.0.0:80:80 ganglia
+    
+    一般最基础的运行命令如下
+    docker run -rm \
+      -name ganglia \
+      -h my.fqdn.org \
+      -v /path/to/conf:/etc/ganglia \
+      -v /path/to/ganglia:/var/lib/ganglia \
+      -p 0.0.0.0:80:80 \
+      ganglia
+      --timezone Continent/City
+    
 
 ### 总结
 修改比较顺利，一遍就通过。
