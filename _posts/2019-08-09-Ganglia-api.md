@@ -83,6 +83,10 @@ entrypoint.sh脚本文件
 注意启动不同进程间用&分别运行。  
 至此，dockerfile的编写也就不难了,具体的内容就不贴出来。
 
+### api路由整理
+这个暂时不做
+
 ### 相关链接
 [github 项目地址](https://github.com/guardian/ganglia-api)  
 [docker 利用CMD或者ENTRYPOINT命令同时启动多个服务](https://blog.csdn.net/bocai_xiaodaidai/article/details/92641534)
+[centos6.5安装/升级到python2.7](https://blog.csdn.net/bang152101/article/details/88539640)

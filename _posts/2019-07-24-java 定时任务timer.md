@@ -17,33 +17,33 @@ java.util.Timer定时器，实际上是个线程，定时调度所拥有的Timer
 
 ### java timer 几种调度方式
 ~~~
-java.util.Timer timer = new java.util.Timer(true);   
-// true 说明这个timer以daemon方式运行（优先级低，   
-// 程序结束timer也自动结束），注意，javax.swing   
-// 包中也有一个Timer类，如果import中用到swing包，   
-// 要注意名字的冲突。   
-  
-TimerTask task = new TimerTask() {   
-public void run() {   
-... //每次需要执行的代码放到这里面。   
-}   
-};   
-  
-//以下是几种调度task的方法：   
-  
-timer.schedule(task, time);   
-// time为Date类型：在指定时间执行一次。   
-  
-timer.schedule(task, firstTime, period);   
-// firstTime为Date类型,period为long   
-// 从firstTime时刻开始，每隔period毫秒执行一次。   
-  
-timer.schedule(task, delay)   
-// delay 为long类型：从现在起过delay毫秒执行一次   
-  
-timer.schedule(task, delay, period)   
-// delay为long,period为long：从现在起过delay毫秒以后，每隔period   
-// 毫秒执行一次。
+    java.util.Timer timer = new java.util.Timer(true);   
+    // true 说明这个timer以daemon方式运行（优先级低，   
+    // 程序结束timer也自动结束），注意，javax.swing   
+    // 包中也有一个Timer类，如果import中用到swing包，   
+    // 要注意名字的冲突。   
+      
+    TimerTask task = new TimerTask() {   
+    public void run() {   
+    ... //每次需要执行的代码放到这里面。   
+    }   
+    };   
+      
+    //以下是几种调度task的方法：   
+      
+    timer.schedule(task, time);   
+    // time为Date类型：在指定时间执行一次。   
+      
+    timer.schedule(task, firstTime, period);   
+    // firstTime为Date类型,period为long   
+    // 从firstTime时刻开始，每隔period毫秒执行一次。   
+      
+    timer.schedule(task, delay)   
+    // delay 为long类型：从现在起过delay毫秒执行一次   
+      
+    timer.schedule(task, delay, period)   
+    // delay为long,period为long：从现在起过delay毫秒以后，每隔period   
+    // 毫秒执行一次。
 ~~~
 
 ### 我的实现
