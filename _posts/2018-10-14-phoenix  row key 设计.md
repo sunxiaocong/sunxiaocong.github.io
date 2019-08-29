@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2018-10-14- phoenix row key设计"
+title: "phoenix row key设计"
 date: 2018-10-14
 categories: BigData
 tags: [phoenix]
