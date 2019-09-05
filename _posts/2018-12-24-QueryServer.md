@@ -2,16 +2,16 @@
 layout: post
 title: "Phoniex queryserver"
 date: 2018-12-24
-categories: phoniex
-tags: [phoniex]
+categories: BigData
+tags: [phoenix]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 本文主要介绍:  
-1.什么是queryserver  
-2.为什么要使用queryserver  
-3.怎么使用queryserver  
+1.什么是QueryServer  
+2.为什么要使用QueryServer  
+3.怎么使用QueryServer   
 <!-- more -->
-## 什么是queryserver？
+## 什么是QueryServer？
 ### 首先了解一下Phoenix是什么？
 ~~~
 • 社区公认的 HBase 上最合适的 SQL 层。
@@ -30,7 +30,7 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 • QueryServer可以有一个或多个，通过负载均衡统一访问入口，并提高可用性。
 ~~~
 
-## 为什么要使用queryserver
+## 为什么要使用QueryServer
 ~~~
 QueryServer自身无状态，扩展更容易
 • 将计算资源移至到 Server 端，客户端可以运行在低配环境中
@@ -66,7 +66,7 @@ print(xx)
 * 轻客户端 JDBC URL 格式：jdbc:phoenix:thin:url=<scheme>://<server-hostname>:<port>[;option=value...]
 
 > scheme:传输协议，目前只支持 http，可以省略。     
-> server-hostname : queryserver 或者 SLB 的 host。  
+> server-hostname : QueryServer 或者 SLB 的 host。  
 > port: 默认端口是8765，可以省略。  
 
 * 访问方式：
@@ -75,8 +75,8 @@ print(xx)
 > 示例：bin/sqlline-thin.py http://localhost:8765  
  
 
-## 怎么使用queryserver
-### queryserver部署（通过docker容器化，在同一机器上可以同时部署多个服务）
+## 怎么使用QueryServer
+### QueryServer部署（通过docker容器化，在同一机器上可以同时部署多个服务）
 如果部署在 HBase 集群，可以省略以下步骤1,2  
 创建配置文件目录 hbase_conf(配置参数调整看相关链接)  
 在 hbase_conf 目录下创建 hbase-site.xml文件，并配置 zk 地址:  
@@ -112,7 +112,7 @@ print(xx)
 > vim /etc/profile 添加以下配置  
 > export HBASE_CONF_DIR=/root/conf  
 > source /etc/profile
-4. 启动 queryserver
+4. 启动 QueryServer
 > bin\queryserver.py start
 
 ## 相关链接
