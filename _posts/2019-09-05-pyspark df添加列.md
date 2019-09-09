@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "pyspark df添加列.md"
+title: "pyspark df添加列"
 date: 2019-09-05
 categories: BigData
 tags: [spark]
@@ -36,6 +36,25 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
     
     # 使用自定义函数
     df1.withColumn('color',toDateUDF('color')).show()
+    
+    ----------------------------------------------------------------------------------------
+    
+    # 创建udf自定义函数
+    from pyspark.sql import functions
+    concat_func = functions.udf(lambda name,age:name+'_'+str(age))  # 简单的连接两个字符串
+    
+    # 应用自定义函数
+    concat_df = spark_df.withColumn("name_age",concat_func(final_data.name, final_data.age))
+    concat_df.show()
+    
 
-### 总结
+### 自定义函数返回值类型
+自定义函数的重点在于定义返回值类型的数据格式，其数据类型基本都是从from pyspark.sql.types import * 导入，常用的包括： 
+- StructType()：结构体 
+- StructField()：结构体中的元素 
+- LongType()：长整型 
+- StringType()：字符串 
+- IntegerType()：一般整型 
+- FloatType()：浮点型
+
 

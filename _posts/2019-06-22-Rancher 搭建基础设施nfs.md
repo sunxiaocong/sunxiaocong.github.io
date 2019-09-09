@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rancher 搭建基础设施nfs"
-date: 2019-06-20
+date: 2019-06-22
 categories: nfs
 tags: [nfs]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png

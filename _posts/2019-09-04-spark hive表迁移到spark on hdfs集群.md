@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "hive表迁移到spark on hdfs集群（跨集群迁移）.md"
+title: "hive表迁移到spark on hdfs集群(跨集群迁移)"
 date: 2019-09-04
 categories: BigData
 tags: [spark]
