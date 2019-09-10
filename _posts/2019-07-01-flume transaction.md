@@ -2,8 +2,8 @@
 layout: post
 title: "flume transaction"
 date: 2019-07-01
-categories: flume
-tags: [flume]
+categories: Flume
+tags: [Flume]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 flume transaction事务是flume非常重要的实现。了解transaction对深入学习flume有非常大的帮助。本文主要分析transaction原理，transaction原理其实与数据库的事务类似。但是也有很大的区别，也是flume不完美的地方。

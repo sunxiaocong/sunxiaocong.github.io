@@ -2,8 +2,8 @@
 layout: post
 title: "2019-08-02-flume安装监控Ganglia"
 date: 2019-08-02
-categories: flume
-tags: [flume]
+categories: Flume
+tags: [Flume]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 1.主机直接部署ganglia监控

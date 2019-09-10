@@ -2,8 +2,8 @@
 layout: post
 title: "python json字符串解码异常记录"
 date: 2018-12-12
-categories: python
-tags: [python]
+categories: Python
+tags: [Python]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 python 

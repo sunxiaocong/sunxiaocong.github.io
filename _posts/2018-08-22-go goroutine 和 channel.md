@@ -2,8 +2,8 @@
 layout: post
 title: "go goroutine 和 channel"
 date: 2018-08-22
-categories: go
-tags: [go]
+categories: Go
+tags: [Go]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 go goroutine 和 channel 并发和通道是go语言的两个特点。

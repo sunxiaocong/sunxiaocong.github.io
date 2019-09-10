@@ -2,8 +2,8 @@
 layout: post
 title: "flume修改file channel内部事务类FileBackedTransaction实战"
 date: 2019-06-25
-categories: flume
-tags: [flume]
+categories: Flume
+tags: [Flume]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 flume自定义channel开发。

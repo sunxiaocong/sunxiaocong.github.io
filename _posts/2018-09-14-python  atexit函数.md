@@ -2,8 +2,8 @@
 layout: post
 title: "python  atexit函数"
 date: 2018-09-14
-categories: python
-tags: [python]
+categories: Python
+tags: [Python]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 python  atexit函数妙用

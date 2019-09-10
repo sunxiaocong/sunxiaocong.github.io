@@ -2,8 +2,8 @@
 layout: post
 title: "http tcp/ip socket区别"
 date: 2018-08-30
-categories: 网络协议
-tags: [网络协议]
+categories: Socket
+tags: [Socket]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 进一步加深理解7层网络模式。

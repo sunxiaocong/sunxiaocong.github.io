@@ -3,7 +3,7 @@ layout: post
 title: "pyspark df添加列"
 date: 2019-09-05
 categories: BigData
-tags: [spark]
+tags: [Spark]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 编写pyspark任务,对df添加新的列。  

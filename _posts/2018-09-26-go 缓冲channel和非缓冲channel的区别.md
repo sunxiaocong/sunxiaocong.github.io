@@ -2,8 +2,8 @@
 layout: post
 title: "go 缓冲channel和非缓冲channel的区别"
 date: 2018-09-26
-categories: go
-tags: [go]
+categories: Go
+tags: [Go]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 在Go中我们make一个channel有两种方式，分别是有缓冲的和没缓冲的

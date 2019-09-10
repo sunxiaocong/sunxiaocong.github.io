@@ -3,7 +3,7 @@ layout: post
 title: "Phoniex queryserver"
 date: 2018-12-24
 categories: BigData
-tags: [phoenix]
+tags: [Phoenix]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 本文主要介绍:  

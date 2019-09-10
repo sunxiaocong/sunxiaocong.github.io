@@ -2,8 +2,8 @@
 layout: post
 title: "python 任务调度APScheduler模块"
 date: 2019-06-20
-categories: python
-tags: [python]
+categories: Python
+tags: [Python]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 APScheduler模块使用总结

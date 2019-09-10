@@ -2,8 +2,8 @@
 layout: post
 title: "通过kafka manager api监控topic的消费者组offset实现告警"
 date: 2019-07-09
-categories: kafka
-tags: [kafka]
+categories: Kafka
+tags: [Kafka]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 通过kafka manager api监控topic的消费者组offset实现告警

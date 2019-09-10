@@ -2,8 +2,8 @@
 layout: post
 title: "Ganglia-api"
 date: 2019-08-09
-categories: docker
-tags: [docker,flume]
+categories: Docker
+tags: [Docker,Flume]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 ganglia-api添加到ganglia镜像中

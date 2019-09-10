@@ -2,8 +2,8 @@
 layout: post
 title: "Ganglia image rebuild"
 date: 2019-08-07
-categories: docker
-tags: [docker,flume]
+categories: Docker
+tags: [Docker,Flume]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 ganglia image rebuild   

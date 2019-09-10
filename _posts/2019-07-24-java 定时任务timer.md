@@ -2,8 +2,8 @@
 layout: post
 title: "java 定时任务timer"
 date: 2019-07-24
-categories: java
-tags: [java]
+categories: Java
+tags: [Java]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 java timer 定时任务模块

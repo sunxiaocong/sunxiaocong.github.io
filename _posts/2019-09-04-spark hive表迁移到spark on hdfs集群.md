@@ -3,7 +3,7 @@ layout: post
 title: "hive表迁移到spark on hdfs集群(跨集群迁移)"
 date: 2019-09-04
 categories: BigData
-tags: [spark]
+tags: [Spark]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 由于源数据在于旧的hbase集群的hdfs上，并未开启8020端口，没办法直接通过文件迁移到新集群。只能通过pyspark 读取hive表数据，写入新的集群的hdfs中。

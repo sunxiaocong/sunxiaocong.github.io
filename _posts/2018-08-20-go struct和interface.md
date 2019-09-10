@@ -2,8 +2,8 @@
 layout: post
 title: "go struct和interface"
 date: 2018-08-20
-categories: go
-tags: [go]
+categories: Go
+tags: [Go]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
 go struct和interface。结构体和接口。
