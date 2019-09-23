@@ -30,5 +30,29 @@ ubuntu: python2
 
 就ok了，使用也不出现问题。
 
+
+### 通过psycopg2操作PostgreSQL
+    import psycopg2
+    
+    """
+        dbname – 数据库名字
+        user – 数据库角色名称
+        password – 数据库角色密码
+        host – 数据库地址
+        port – 端口
+    """
+    conn = psycopg2.connect(dbname="mydb", user="postgres",
+            password="1234", host="127.0.0.1", port="5432")
+    
+    # 执行sql命令        
+    cur.execute("you can do select or update or delect insert")
+    
+    # 提交事务
+    conn.commit()
+    
+    # 关闭连接
+    conn.close()
+
+
 ### 总结
 环境问题很头疼
