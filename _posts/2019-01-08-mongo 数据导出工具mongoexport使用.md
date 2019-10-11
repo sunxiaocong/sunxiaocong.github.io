@@ -16,6 +16,9 @@ image: http://gastonsanchez.com/images/blog/mathjax_logo.png
     # 增加一个检索filter后导出CSV
     mongoexport --host 127.0.0.1 --db sampleData --collection eventV4 --queryFile ./range.json --csv --out events.csv --fields '_id,something'
     
+    # cat range.json
+    {"something":{"$gt":1}}
+
 ### 参数
     Usage:
       mongoexport <options>
